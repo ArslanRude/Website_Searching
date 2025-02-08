@@ -1,0 +1,13 @@
+prefix=C:/Users/Arslan/Documents/Website_Searching/site_search/Library
+exec_prefix=C:/Users/Arslan/Documents/Website_Searching/site_search/Library
+libdir=C:/Users/Arslan/Documents/Website_Searching/site_search/Library/lib
+sharedlibdir=C:/Users/Arslan/Documents/Website_Searching/site_search/Library/lib
+includedir=C:/Users/Arslan/Documents/Website_Searching/site_search/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
