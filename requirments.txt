@@ -6,3 +6,4 @@ langchainhub
 langchain-community
 langchain-groq
 google-search-results
+streamlit

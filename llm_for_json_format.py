@@ -9,8 +9,8 @@ def json_format(working_photos,data,url):
                 1- A short description (max 30 words)
                 2- A long description (max 300 words)
                 3- Relevant tags/keywords (comma-separated)
-                4- {working_photos['logo']} A list of logo URLs related to the business use only one of these link in logo url
-                5- {working_photos['images']} A list of images URLs related to the business use only three of these these link in images link
+                4- {working_photos} A list of logo URLs related to the business use only one of these link in logo url
+                5- {working_photos} A list of images URLs related to the business use only three of these these link in images link
                 6- {url} Use this link in website link
                 Here is the business data:
                 {data}
@@ -38,5 +38,5 @@ def json_format(working_photos,data,url):
         partial_variables={"format_instructions": parse.get_format_instructions()},
     )
     chain = prompt | llm | parse
-    response = chain.invoke({"query": response})
-    return response
+    result = chain.invoke({"query": response})
+    return result

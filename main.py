@@ -26,11 +26,12 @@ data = '''
         }
     ]
 '''
-raw_url = llm_response = get_link(data)
-structured_url = structured_link(raw_url)
-working_photos = get_image(structured_url['url'])
-result = json_format(data=data,working_photos=working_photos,url=structured_url)
-print(result)
 
+raw_url = get_link(data)
+structured_url = structured_link(raw_url)
+working_photos = get_image(structured_url)
+result = json_format(data=input,working_photos=working_photos,url=structured_url)
+print(result) 
+ 
 
 

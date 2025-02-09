@@ -7,8 +7,8 @@ from langchain_core.tools import Tool
 
 def get_link(data):
     llm = ChatGroq(
-        temperature=0,
-        model_name="mixtral-8x7b-32768",
+        temperature=.666,
+        model_name="Deepseek-R1-Distill-Llama-70b",
         api_key="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"
     )
 
@@ -33,8 +33,8 @@ def get_link(data):
         MessagesPlaceholder("agent_scratchpad"),
     ])
 
-    agent = create_tool_calling_agent(llm, tools, prompt)
-    agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
+    agent = create_tool_calling_agent(llm, tools, prompt ,)
+    agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, handle_parsing_errors=True,)
 
     def process_json_input(json_data):
         """
