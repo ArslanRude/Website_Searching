@@ -29,10 +29,12 @@ data = '''
 
 raw_url = get_link(data)
 structured_url = structured_link(raw_url)
-if structured_link['found'] == True:
+if structured_url['found'] == True:
     working_photos = get_image(structured_url)
     result = json_format(data=input,working_photos=working_photos,url=structured_url)
-    print(result) else:
+    print(result) 
+
+else:
     print("Link not Found.")
 
 
