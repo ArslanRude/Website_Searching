@@ -8,3 +8,4 @@ google-search-results
 streamlit
 requests
 python-dotenv
+langchain[groq]
