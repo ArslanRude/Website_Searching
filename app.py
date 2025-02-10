@@ -46,3 +46,28 @@ if st.button("Process Data"):
                     
             except Exception as e:
                 st.error(f"An error occurred: {str(e)}")
+
+
+
+
+    #                     [
+    #     {
+    #         \"id\": 8608,
+    #         \"name\": \"Xelent Solution\",
+    #         \"address\": \"p 58 Usman town\",
+    #         \"city\": \"Faisalabad\",
+    #         \"province\": \"Punjab\",
+    #         \"post_code\": \"38000\",
+    #         \"phone\": \"+92 300 1076788\",
+    #         \"contact_name\": null,
+    #         \"title\": null,
+    #         \"employee_count\": \"1 TO 20\",
+    #         \"employee_code\": \"1\",
+    #         \"annual_sales\": \"LESS THAN $500,000\",
+    #         \"sale_code\": \"1\",
+    #         \"sic_code\": null,
+    #         \"industry\": \"Software House\",
+    #         \"type\": \"apparel\",
+    #         \"country\": \"pakistan\",
+    #     }
+    # ]
