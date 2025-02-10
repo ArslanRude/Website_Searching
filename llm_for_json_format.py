@@ -1,12 +1,9 @@
-from langchain.chat_models import init_chat_model
+from langchain_groq import ChatGroq
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 
 def json_format(working_photos,data,url):
-    llm = init_chat_model(model="Deepseek-R1-Distill-Llama-70b",
-                          temperature=.666,
-                          api_key="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",
-                          model_provider="groq")
+    llm = ChatGroq(temperature=0.6, model_name="Deepseek-R1-Distill-Llama-70b", api_key="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")
     response = llm.invoke(f'''
     message = "Extract the following details for each business in the given JSON list:
                 1- A short description (max 30 words)

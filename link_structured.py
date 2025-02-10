@@ -1,5 +1,5 @@
 from typing_extensions import TypedDict,Annotated
-from langchain.chat_models import init_chat_model
+from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 
 prompt = ChatPromptTemplate.from_messages([
@@ -17,10 +17,11 @@ class LinkResult(TypedDict):
     found: Annotated[bool, "Whether a valid link was found"]
 
 def structured_link(data):
-  llm = init_chat_model(model="Deepseek-R1-Distill-Llama-70b",
-                          temperature=.666,
-                          api_key="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",
-                          model_provider="groq")
+  llm = ChatGroq(
+        temperature=0,
+        model_name="Deepseek-R1-Distill-Llama-70b",
+        api_key="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"
+    )
   structured_llm = llm.with_structured_output(
     schema=LinkResult,
     method="json_mode",
