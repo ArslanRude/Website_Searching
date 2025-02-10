@@ -1,4 +1,4 @@
-from langchain_groq import ChatGroq
+from langchain.chat_models import init_chat_model
 from langchain_community.utilities import SerpAPIWrapper
 from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -6,11 +6,10 @@ from langchain_core.messages import HumanMessage
 from langchain_core.tools import Tool
 
 def get_link(data):
-    llm = ChatGroq(
-        temperature=.666,
-        model_name="Deepseek-R1-Distill-Llama-70b",
-        api_key="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"
-    )
+    llm = init_chat_model(model="Deepseek-R1-Distill-Llama-70b",
+                          temperature=.666,
+                          api_key="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",
+                          model_provider="groq")
 
     search = SerpAPIWrapper(serpapi_api_key="add2fee9cf6f22f1bb48eda0b42ba9744fd4e990a309f46ffc02adbe51acbf7a")
     tools = Tool(

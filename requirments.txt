@@ -2,8 +2,9 @@ bs4
 requests
 pillow
 langchain
-langchainhub
 langchain-community
 langchain-groq
 google-search-results
 streamlit
+requests
+python-dotenv
