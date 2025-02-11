@@ -1,9 +1,10 @@
 import streamlit as st
-from llm_search import get_link
-from link_structured import structured_link
+# from llm_search import get_link
+# from link_structured import structured_link
 from image_extract import get_image
 from llm_for_json_format import json_format
 from website_link_extract import get_link_from_website
+from serpapi_search import google_search
 
 
 st.set_page_config(page_title="Website Search", page_icon="🖥️")
@@ -21,9 +22,10 @@ if st.button("Process Data"):
     else:
         with st.spinner("Processing your data..."):
             try:
-                raw_url = get_link(data)
-                structured_url = structured_link(raw_url)
-                
+                # raw_url = get_link(data)
+                # structured_url = structured_link(raw_url)
+                urls = google_search(data)
+                structured_url = urls[0]
                 if structured_url['found']:
                     working_photos = get_image(structured_url)
                     web_other_links = get_link_from_website(structured_url)

@@ -4,9 +4,7 @@ from typing_extensions import TypedDict,Annotated
 class Format(TypedDict):
     """Result containing Businness data"""
     name: Annotated[str, "Businness name"]
-    address: Annotated[str, "Businness address"]
-    city: Annotated[str, "Businness city"]
-    province: Annotated[str, "Businness province"]
+    industry: Annotated[str, "Businness Industry"]
     country: Annotated[str, "Businness country"]
 
 def data_extract(data):
