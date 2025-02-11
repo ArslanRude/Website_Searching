@@ -24,8 +24,7 @@ if st.button("Process Data"):
             try:
                 # raw_url = get_link(data)
                 # structured_url = structured_link(raw_url)
-                urls = google_search(data)
-                structured_url = urls[0]
+                structured_url = google_search(data)
                 if structured_url['found']:
                     working_photos = get_image(structured_url)
                     web_other_links = get_link_from_website(structured_url)
