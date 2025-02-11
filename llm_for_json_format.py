@@ -12,11 +12,11 @@ def json_format(working_photos,data,url,other_links):
                 4- {working_photos} A list of logo URLs related to the business use only one of these link in logo url
                 5- {working_photos} A list of images URLs related to the business use only three of these these link in images link
                 6- {url} Use this link in website link
-                7- {other_links['facebook_url']} if link found write it in facebook / if not found write facebook.com
-                8- {other_links['twitter_url']} if link found write it in twitter / if not found write twitter.com
-                9- {other_links['youtube_url']} if link found write it in youtube / if not found write youtube.com.com
-                10- {other_links['linkedin_url']} if link found write it in linkedin / if not found write linkedin.com
-                10- {other_links['email']} if email found write it in email / if not found write example@.com
+                7- {other_links['facebook_url']} if link found write it in facebook / if not found write facebook.com.
+                8- {other_links['twitter_url']} if link found write it in twitter / if not found write twitter.com.
+                9- {other_links['youtube_url']} if link found write it in youtube / if not found write youtube.com.com.
+                10- {other_links['linkedin_url']} if link found write it in linkedin / if not found write linkedin.com.
+                10- {other_links['email']} if email found write it in email / if not found write example@.com.
 
                 Here is the business data:
                 {data}
