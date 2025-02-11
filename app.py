@@ -32,6 +32,7 @@ if st.button("Process Data"):
                     )
 
                     st.success("Processing Complete!")
+                    st.write(structured_url)
                     st.subheader("Formatted Output:")
                     st.json(result)
 
