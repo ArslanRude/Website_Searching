@@ -2,7 +2,7 @@ from langchain_groq import ChatGroq
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 
-def json_format(working_photos,data,url,other_links = "a"):
+def json_format(working_photos,data,url,other_links):
     llm = ChatGroq(temperature=0.6, model_name="Deepseek-R1-Distill-Llama-70b", api_key="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")
     response = llm.invoke(f'''
     message = "Extract the following details for each business in the given JSON list:

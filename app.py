@@ -26,12 +26,12 @@ if st.button("Process Data"):
                 
                 if structured_url['found']:
                     working_photos = get_image(structured_url)
-                    # web_other_links = get_link_from_website(structured_url)
+                    web_other_links = get_link_from_website(structured_url)
                     result = json_format(
                         data=data,
                         working_photos=working_photos,
                         url=structured_url,
-                        # other_links = web_other_links
+                        other_links = web_other_links
                     )
 
                     st.success("Processing Complete!")
