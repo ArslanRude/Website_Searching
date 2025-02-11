@@ -54,6 +54,5 @@ def get_image(structured_link):
     }
     return working_photos
   except:
-    pass
     return ""
   
