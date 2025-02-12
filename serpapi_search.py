@@ -1,7 +1,8 @@
 from serpapi import GoogleSearch
+from data_extract import data_extract
 
 def google_search(data):
-    websites_links = []
+    data = data_extract(data)
     business_data = data
     query = f"{business_data['name']} {business_data['industry']} {business_data['country']}"
 
@@ -17,7 +18,7 @@ def google_search(data):
     client = GoogleSearch(params)
     
     results = client.get_dict()
-    links 
+    links = None  # Initialize links to None
     if "organic_results" in results:
         for item in results["organic_results"]:
             links = item.get("link")

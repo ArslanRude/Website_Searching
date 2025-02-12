@@ -6,6 +6,7 @@ class Format(TypedDict):
     name: Annotated[str, "Businness name"]
     industry: Annotated[str, "Businness Industry"]
     country: Annotated[str, "Businness country"]
+    
 
 def data_extract(data):
     llm = ChatGroq(temperature=0,model_name="Deepseek-R1-Distill-Llama-70b",api_key="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")
