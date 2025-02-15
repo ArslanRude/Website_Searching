@@ -3,10 +3,10 @@ requests
 pillow
 langchain-groq
 google-search-results
-streamlit
 requests
 python-dotenv
 langchain[groq]
 langchain-core>=0.2.0
 langchain-community>=0.2.0
 langchain>=0.2.0
+flask

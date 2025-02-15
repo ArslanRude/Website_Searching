@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 
 def get_link_from_website(link):
-    try:
+    try: 
+        link = link['url']
         geturl = requests.get(link)
         soup = BeautifulSoup(geturl.text, "html.parser")
         footer = soup.find("footer")
@@ -26,4 +27,4 @@ def get_link_from_website(link):
                 links_from_website['email'] = i
         return links_from_website
     except:
-        return ""
+        return {'status':'Error occure while extracting Links.'}

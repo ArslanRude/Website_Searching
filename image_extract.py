@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 def get_image(structured_link):
   try:
-    link = structured_link['url']
+    link = structured_link['url'] 
     geturl = requests.get(link)
     soup = BeautifulSoup(geturl.text, "html.parser")
     images = soup.find_all("img")
@@ -54,5 +54,5 @@ def get_image(structured_link):
     }
     return working_photos
   except:
-    return ""
+    return {'status':'Error occure while extracting Images.'}
   
