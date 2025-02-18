@@ -24,4 +24,4 @@ def get_data(params):
         return jsonify(url),300
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=80,host='0.0.0.0')
