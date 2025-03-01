@@ -1,9 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-def get_image(structured_link):
+def get_image(link):
   try:
-    link = structured_link['url'] 
     geturl = requests.get(link)
     soup = BeautifulSoup(geturl.text, "html.parser")
     images = soup.find_all("img")

@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 
 def get_link_from_website(link):
     try: 
-        link = link['url']
         geturl = requests.get(link)
         soup = BeautifulSoup(geturl.text, "html.parser")
         footer = soup.find("footer")

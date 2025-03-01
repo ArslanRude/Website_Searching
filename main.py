@@ -1,7 +1,7 @@
 from image_extract import get_image
 from llm_for_json_format import json_format
 from website_link_extract import get_link_from_website
-from serpapi_search import google_search
+from serperdevtool_search import google_search
 from flask import Flask,request,jsonify
 import concurrent.futures
 
